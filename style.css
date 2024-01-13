@@ -1,0 +1,170 @@
+*{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+    color: rgb(255, 255, 255);
+}
+body{
+    background-color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+.about-us{
+    width: 100vw;
+    height: 100vh;
+    display:inline-flex;
+    align-items:normal;
+    justify-items: center;
+}
+.about{
+    top:50%;
+    left:50%;
+    width: 30vw;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    overflow: hidden;
+    
+}
+.about >h1{
+    font-size: 3rem;
+}
+.about a{
+    transform: translate(0, 10rem);
+}
+.about .service{
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    display: block;
+    text-align: left;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    list-style: none;
+}
+.about img{
+    vertical-align: middle;
+    width: 5%;
+}
+.gallery{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80vw;
+    height: auto;
+    background-color: rgb(61, 61, 61);
+    justify-content:space-between;
+    position: relative;
+}
+.gallery img{
+    width:30vh;
+}
+#photo1{
+    position:relative;
+    transform: translate(-10%, 50%);
+}
+#photo2{
+    position: relative;
+    transform: translate(60%, 150%);
+}
+#photo3{
+    position: relative;
+
+}
+#photo4{
+    position: relative;
+    transform: translate(70%, 90%);
+}
+.gallery img{
+    width: 20%;
+    height: auto;
+}
+.s{
+    width: 60%;
+    margin-bottom: 0.4rem;
+    position: relative;
+    --accent-color: rgb(83, 83, 83);
+}
+.s:hover,
+.s:focus{
+    font-weight: 500;
+    color: black;
+    transition: 1s;
+}
+.s:hover::before,
+.s:focus::before{
+    transition: transform 1.5s ease-out;
+    transform: scaleX(1);
+}
+.s::before{
+    content:'';
+    top:1px;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index: -1;
+    position:absolute;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.carousel{
+    margin-top: 1rem;
+    width: 100vw;
+    height: 95vh;
+    position: relative;
+
+}
+.reviews{
+    margin: 2.5rem auto 1rem auto;
+}
+.reviews.reviews-description{
+    display: block;
+}
+.reviews  p{
+    margin: 2rem auto auto 5.5rem;
+    font-size: 1.6rem;
+}
+.reviews p >img{
+    width: 40px;
+    vertical-align: bottom;
+}
+
+.slide{
+    position:absolute;
+    inset: 0;
+    opacity: 0;
+}
+.slide img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.slide[data-active]{
+    opacity: 1;
+}
+.carousel > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.carousel-button{
+    position: absolute;
+    background:none;
+    z-index: 2;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+}
+
+.carousel-button.prev{
+    left: 1rem;
+}
+.carousel-button.next{
+    right: 1rem;
+}
